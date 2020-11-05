@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="weather-app.cqrlosarch.vercel.app">
+    <a href="https://vercel.com/cqrlosarch/weather-app">
       Demo
     </a>
     <span> | </span>
