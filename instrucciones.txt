@@ -1,0 +1,27 @@
+Desafío: cree una aplicación meteorológica utilizando una API. Utilice bibliotecas de front-end como React o Vue. No mire la solución existente. Cumplir con las historias de usuario a continuación:
+
+Historia de usuario: puedo ver el clima de la ciudad por defecto, preferiblemente mi ubicación actual
+Historia de usuario: puedo buscar ciudad
+Historia de usuario: puedo ver el clima de hoy y los próximos 5 días
+Historia de usuario: puedo ver la fecha y la ubicación del clima
+Historia de usuario: puedo ver según la imagen para cada tipo de clima
+Historia de usuario: puedo ver el grado mínimo y máximo cada día
+Historia de usuario: puedo ver el estado y la dirección del viento
+Historia de usuario: puedo ver el porcentaje de humedad
+Historia de usuario: puedo ver el indicador de visibilidad
+Historia de usuario: puedo ver el número de presión de aire
+Historia de usuario (opcional): puedo solicitar el clima de mi ubicación actual
+Historia de usuario (opcional): puedo convertir la temperatura en grados Celsius a Fahrenheit y viceversa
+Icono: https://google.github.io/material-design-icons/
+
+API: https://www.metaweather.com/api/
+
+Sugerencias: para desarrolladores de front-end, puede usar https://cors-anywhere.herokuapp.com/ para ayudar a acceder a datos de otros sitios web que normalmente están prohibidos por la política del mismo origen de los navegadores web.
+
+Siempre y cuando cumpla con todas las historias de usuario, puede dar sus toques personales agregando transición, usando sus propias imágenes, cambiando colores, o incluso creando su propio diseño, ...
+
+Recuerde poner su nombre en el pie de página para evitar que otros envíen sus soluciones.
+
+Una vez que haya completado, envíe sus soluciones proporcionando URL tanto para el repositorio de GitHub como para la aplicación en vivo en cualquier plataforma de alojamiento (5 Plataforma de alojamiento gratuito) y explique brevemente lo que ha hecho. Puede comprobar las soluciones de otros y darles sus comentarios.
+
+Comparta sus soluciones con otros con #devchallenges y etiquete a @devchallengesio en Twitter.
