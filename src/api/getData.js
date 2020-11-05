@@ -5,21 +5,18 @@ const getData = async (city) => {
     );
     const data = await res.json();
     return await getById(data[0].woeid);
-  } catch (error) {
-
-  }
+  } catch (error) {}
 };
 const getDataGeo = async (coord) => {
-  const [latt, long]=coord
+  console.log(coord);
+  const [latt, long] = coord;
   try {
     const res = await fetch(
       `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong=${latt},${long}`
     );
     const data = await res.json();
     return await getById(data[0].woeid);
-  } catch (error) {
-
-  }
+  } catch (error) {}
 };
 // 766273
 const getById = async (id) => {
@@ -28,11 +25,9 @@ const getById = async (id) => {
       `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${id}`
     );
     const data = await res.json();
- 
+
     return data;
-  } catch (error) {
- 
-  }
+  } catch (error) {}
 };
 
-export {getData, getDataGeo};
+export { getData, getDataGeo };

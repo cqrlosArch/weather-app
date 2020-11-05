@@ -21,29 +21,49 @@ const GlobalStyled = createGlobalStyle`
 function App() {
   const [weatherToday, setWeatherToday] = useState();
   const [weatherWeek, setWeatherWeek] = useState();
-  const [city, setCity] = useState('barcelona');
-  const [geoLocation, setGeolocation] = useState([]);
+  const [city, setCity] = useState(null);
+  const [geoLocation, setGeolocation] = useState(null);
 
+  //Search App function 
   const initApp = (data) => {
     console.log(data);
-    setCity(data?.title)
+    setCity(data?.title);
     setWeatherToday(data?.consolidated_weather);
     setWeatherWeek(data?.consolidated_weather.filter((_, ind) => ind !== 0));
   };
-  useEffect(() => {
-    getData(city).then((data) => {
-      initApp(data);
-    });
 
-    // setWeatherToday(data?.consolidated_weather[0]);
-    // setWeatherWeek(data?.consolidated_weather.filter((_,ind)=>ind!==0))
+  //search by city
+  useEffect(() => {
+    console.log('city');
+    if (city) {
+      getData(city).then((data) => {
+        initApp(data);
+      });
+    }
   }, [city]);
 
+  //search by location
   useEffect(() => {
-    getDataGeo(geoLocation).then((data) => {
-      initApp(data);
-    });
+    console.log('geo');
+    if (geoLocation) {
+      getDataGeo(geoLocation).then((data) => {
+        initApp(data);
+      });
+    }
   }, [geoLocation]);
+
+  //initial location
+  useEffect(() => {
+    const getCoord = (latt, long) => {
+      let geolocation = [latt, long];
+      getDataGeo(geolocation).then((data) => {
+        initApp(data);
+      });
+    };
+    return navigator.geolocation.getCurrentPosition((position) => {
+      getCoord(position.coords.latitude, position.coords.longitude);
+    });
+  }, []);
 
   return (
     <>
