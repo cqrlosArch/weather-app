@@ -83,6 +83,5 @@ $ yarn start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@cqrlosArch](https://github.com/cqrlosArch)
+- Twitter [@cqrlosArch](https://twitter.com/cqrlosArch)
