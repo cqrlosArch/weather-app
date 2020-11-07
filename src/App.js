@@ -4,6 +4,7 @@ import { getData, getDataGeo } from './api/getData';
 import WeatherInfo from './components/WeatherInfo';
 import WeatherToday from './components/WeatherToday';
 import Wrapper from './components/Wrapper';
+import localSt from './storage/config';
 
 // import data from './api/data.json';
 
@@ -64,17 +65,23 @@ function App() {
 
   //initial location
   useEffect(() => {
-    const getCoord = (latt, long) => {
-      let geolocation = [latt, long];
-      getDataGeo(geolocation)
-        .then((data) => {
-          if (data) initApp(data);
-        })
-        .catch((err) => console.log(err));
-    };
-    return navigator.geolocation.getCurrentPosition((position) => {
-      getCoord(position.coords.latitude, position.coords.longitude);
-    });
+    if (!localStorage.getItem('weather')) {
+      const getCoord = (latt, long) => {
+        let geolocation = [latt, long];
+        getDataGeo(geolocation)
+          .then((data) => {
+            localSt.setLocalStore('weather', data);
+            if (data) initApp(data);
+          })
+          .catch((err) => console.log(err));
+      };
+      return navigator.geolocation.getCurrentPosition((position) => {
+        getCoord(position.coords.latitude, position.coords.longitude);
+      });
+    } else {
+      const data= localSt.getLocalStore('weather')
+      initApp(data);
+    }
   }, []);
 
   return (
