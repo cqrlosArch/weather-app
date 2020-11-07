@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SearchMenuStyled = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
