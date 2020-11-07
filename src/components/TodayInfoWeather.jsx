@@ -8,6 +8,9 @@ const TodayInfoWeatherStyled = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: -2rem;
+  @media screen and (max-width: 550px) {
+    margin-top: 1rem;
+    }
 
   .temperature {
     font-weight: 500;
@@ -15,6 +18,9 @@ const TodayInfoWeatherStyled = styled.div`
     line-height: 169px;
     color: #e7e7eb;
     margin: 0;
+    @media screen and (max-width: 550px) {
+      font-size: 80px;
+    }
   }
 
   .celsius {

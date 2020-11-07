@@ -7,7 +7,7 @@ const ListHightlightsStyled = styled.div`
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(328px, 1fr));
   gap: 2rem;
 `;
 

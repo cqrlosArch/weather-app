@@ -8,11 +8,15 @@ import StateImg from './StateImg';
 const TodayIconWeatherStyled = styled.div`
   width: 100%;
   height: 200px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
   position: relative;
+  @media screen and (max-width: 550px) {
+      padding-top:2rem;
+    }
+  /* Nubes */
   &::after {
     content: '';
     position: absolute;
@@ -23,15 +27,19 @@ const TodayIconWeatherStyled = styled.div`
     background-repeat: no-repeat;
     background-size: 140%;
     background-position: 50% 20%;
-
     filter: opacity(0.3);
+    @media screen and (max-width: 550px) {
+      background-size: 100%;
+    }
   }
 `;
 
 const TodayIconWeather = ({ state }) => {
-  return <TodayIconWeatherStyled >
-    <StateImg state={state} width={'120px'}/>
-  </TodayIconWeatherStyled>;
+  return (
+    <TodayIconWeatherStyled>
+      <StateImg state={state} width={'120px'} />
+    </TodayIconWeatherStyled>
+  );
 };
 
 export default TodayIconWeather;

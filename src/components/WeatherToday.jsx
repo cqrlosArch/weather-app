@@ -14,6 +14,13 @@ const WeatherTodayStyled = styled.div`
   align-items: center;
   position: relative;
   padding: 1rem 0;
+
+  @media screen and (max-width: 550px){
+    grid-column:1/1;
+    grid-row:1/1;
+   
+  }
+
 `;
 
 const WeatherToday = ({ weatherToday, city , setGeolocation}) => {

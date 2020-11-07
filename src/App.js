@@ -24,7 +24,7 @@ function App() {
   const [city, setCity] = useState(null);
   const [geoLocation, setGeolocation] = useState(null);
 
-  //Search App function 
+  //Search App function
   const initApp = (data) => {
     console.log(data);
     setCity(data?.title);
@@ -34,7 +34,6 @@ function App() {
 
   //search by city
   useEffect(() => {
-    console.log('city');
     if (city) {
       getData(city).then((data) => {
         initApp(data);
@@ -57,8 +56,9 @@ function App() {
     const getCoord = (latt, long) => {
       let geolocation = [latt, long];
       getDataGeo(geolocation).then((data) => {
-        initApp(data);
-      });
+        
+       if(data)  initApp(data);
+      }).catch(err=>console.log(err));
     };
     return navigator.geolocation.getCurrentPosition((position) => {
       getCoord(position.coords.latitude, position.coords.longitude);
