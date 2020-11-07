@@ -11,7 +11,7 @@ const CardHightlightsStyled = styled.div`
   background: #1e213a;
   height: ${({ height }) => height && height};
   @media screen and (max-width: 550px) {
-    min-width: 228px;
+    min-width: 260px;
     }
   .title {
     margin: 0;

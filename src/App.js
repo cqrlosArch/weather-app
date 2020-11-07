@@ -8,12 +8,22 @@ import Wrapper from './components/Wrapper';
 // import data from './api/data.json';
 
 const GlobalStyled = createGlobalStyle`
+
+*{
+  box-sizing:border-box;
+}
   body{
     font-family: 'Raleway', sans-serif;
     margin:0;
     width:100vw;
     height:auto;
     color:#E7E7EB;
+
+    @media screen and (max-width: 550px){
+    width:100%;
+   
+   
+  }
   }
 
 `;
@@ -55,10 +65,11 @@ function App() {
   useEffect(() => {
     const getCoord = (latt, long) => {
       let geolocation = [latt, long];
-      getDataGeo(geolocation).then((data) => {
-        
-       if(data)  initApp(data);
-      }).catch(err=>console.log(err));
+      getDataGeo(geolocation)
+        .then((data) => {
+          if (data) initApp(data);
+        })
+        .catch((err) => console.log(err));
     };
     return navigator.geolocation.getCurrentPosition((position) => {
       getCoord(position.coords.latitude, position.coords.longitude);

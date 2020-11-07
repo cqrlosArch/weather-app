@@ -12,7 +12,7 @@ const ListCardStyled = styled.div`
   grid-auto-flow: dense;
   @media screen and (max-width: 550px){
     margin:0;
-   
+    grid-gap: auto;
   }
 `;
 

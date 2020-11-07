@@ -15,8 +15,7 @@ const WeatherInfoStyled = styled.div`
     grid-column: 1/1;
     grid-row: 2/-1;
     padding-top: 2rem;
-    padding-botton: 2rem;
-   
+    padding-bottom: 2rem;
   }
 
   .title_hightlights {
