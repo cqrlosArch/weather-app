@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import imgBG from '../assets/Cloud-background.png';
 
-import defaultImg from '../assets/LightCloud.png';
 import StateImg from './StateImg';
 
 const TodayIconWeatherStyled = styled.div`
@@ -13,6 +12,7 @@ const TodayIconWeatherStyled = styled.div`
   align-items: center;
   opacity: 1;
   position: relative;
+  
   @media screen and (max-width: 550px) {
       padding-top:2rem;
     }

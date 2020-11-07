@@ -9,10 +9,12 @@ const ListHightlightsStyled = styled.div`
   margin-right: auto;
   grid-template-columns: repeat(auto-fill, minmax(328px, 1fr));
   gap: 2rem;
+  @media screen and (max-width: 550px) {
+ 
+  }
 `;
 
 const ListHightlights = ({ weatherToday }) => {
-
   const {
     wind_direction_compass,
     wind_speed,
@@ -26,11 +28,23 @@ const ListHightlights = ({ weatherToday }) => {
         title={'Wind status'}
         speed={wind_speed}
         icon={wind_direction_compass}
-        height= {'164px'}
+        height={'164px'}
       />
-      <CardHightlights title={'Humidity'} humidity={humidity}  height= {'164px'}/>
-      <CardHightlights title={'Visibility'} visibility={visibility} height= {'119px'}/>
-      <CardHightlights title={'Air Pressure'} air_pressure={air_pressure} height= {'119px'}/>
+      <CardHightlights
+        title={'Humidity'}
+        humidity={humidity}
+        height={'164px'}
+      />
+      <CardHightlights
+        title={'Visibility'}
+        visibility={visibility}
+        height={'119px'}
+      />
+      <CardHightlights
+        title={'Air Pressure'}
+        air_pressure={air_pressure}
+        height={'119px'}
+      />
     </ListHightlightsStyled>
   );
 };

@@ -15,7 +15,7 @@ const WeatherInfoStyled = styled.div`
     grid-column: 1/1;
     grid-row: 2/-1;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-botton: 2rem;
    
   }
 
@@ -28,7 +28,9 @@ const WeatherInfoStyled = styled.div`
     color: #e7e7eb;
     margin: 0.2rem auto;
     @media screen and (max-width: 550px) {
-      padding-top: 2rem;
+      padding: 2rem;
+      margin-left:0;
+      margin-right:0;
     }
   }
 `;

@@ -16,6 +16,7 @@ const WeatherTodayStyled = styled.div`
   padding: 1rem 0;
 
   @media screen and (max-width: 550px){
+    width:100%;
     grid-column:1/1;
     grid-row:1/1;
    
