@@ -29,7 +29,8 @@ const TodayIconWeatherStyled = styled.div`
     background-position: 50% 20%;
     filter: opacity(0.3);
     @media screen and (max-width: 550px) {
-      background-size: 100%;
+      background-size: 80%;
+      background-position: 50% 20%;
     }
   }
 `;
