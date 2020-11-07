@@ -18,6 +18,7 @@ const GlobalStyled = createGlobalStyle`
     width:100vw;
     height:auto;
     color:#E7E7EB;
+    overflow-x:hidden;
 
     @media screen and (max-width: 550px){
     width:100%;
