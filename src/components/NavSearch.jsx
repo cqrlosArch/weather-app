@@ -31,7 +31,7 @@ const NavSearchStyled = styled.div`
   .form_input {
     outline: none;
     border: none;
-    width: 168px;
+    max-width: 168px;
     height: 38px;
     border: 1px solid #e7e7eb;
     background-color: inherit;
@@ -39,6 +39,10 @@ const NavSearchStyled = styled.div`
     padding-left: 3rem;
     color: #616475;
     position: relative;
+
+    @media screen and (max-width: 550px) {
+      max-width: 220px;
+  }
     &:focus {
       color: #fff;
     }
