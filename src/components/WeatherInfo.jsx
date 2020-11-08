@@ -11,6 +11,7 @@ const WeatherInfoStyled = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  padding:1rem 0;
   @media screen and (max-width: 550px) {
     grid-column: 1/1;
     grid-row: 2/-1;

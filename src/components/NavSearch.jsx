@@ -14,7 +14,7 @@ const NavSearchStyled = styled.div`
   justify-content: flex-start;
   align-items: center;
   transform: ${({ visible }) =>
-    visible ? 'translate(0)' : 'translate(-110%)'};
+    visible ? 'translate(0)' : 'translate(-150%)'};
   transition: transform 0.3s ease-in-out;
   .icon-close {
     align-self: flex-end;
