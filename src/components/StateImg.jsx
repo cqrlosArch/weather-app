@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const StateImgStyled = styled.div`
   .img {
     width: 100%;
-    max-width: ${({width})=>width ? width : '54.44px'};
-    height: ${({height})=>height ? height :'auto' };
+    max-width: ${({ width }) => (width ? width : '54.44px')};
+    height: ${({ height }) => (height ? height : 'auto')};
   }
 `;
 

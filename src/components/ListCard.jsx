@@ -10,8 +10,8 @@ const ListCardStyled = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   grid-gap: 1rem 4rem;
   grid-auto-flow: dense;
-  @media screen and (max-width: 550px){
-    margin:0;
+  @media screen and (max-width: 550px) {
+    margin: 0;
     grid-gap: auto;
   }
 `;

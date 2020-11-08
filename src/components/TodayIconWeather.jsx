@@ -12,10 +12,10 @@ const TodayIconWeatherStyled = styled.div`
   align-items: center;
   opacity: 1;
   position: relative;
-  
+
   @media screen and (max-width: 550px) {
-      padding-top:2rem;
-    }
+    padding-top: 2rem;
+  }
   /* Nubes */
   &::after {
     content: '';

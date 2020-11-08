@@ -12,7 +12,7 @@ const CardHightlightsStyled = styled.div`
   height: ${({ height }) => height && height};
   @media screen and (max-width: 550px) {
     min-width: 260px;
-    }
+  }
   .title {
     margin: 0;
   }
@@ -24,13 +24,13 @@ const CardHightlightsStyled = styled.div`
   }
   .progress-bar {
     width: 160px;
-    position:relative;
-    &::after{
-      content:'%';
-      position:absolute;
-      right:0;
-      bottom:-10px;
-      font-size:10px;
+    position: relative;
+    &::after {
+      content: '%';
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+      font-size: 10px;
     }
   }
   .number {

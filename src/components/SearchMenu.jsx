@@ -34,13 +34,12 @@ const SearchMenuStyled = styled.div`
   }
 `;
 
-const SearchMenu = ({setGeolocation}) => {
+const SearchMenu = ({ setGeolocation, openMenu }) => {
   const handleGPS = () => {
     const getCoord = (latt, long) => {
       console.log(latt, long);
-      const geoCoord=[latt, long]
-      setGeolocation(geoCoord)
-      
+      const geoCoord = [latt, long];
+      setGeolocation(geoCoord);
     };
     navigator.geolocation.getCurrentPosition((position) => {
       getCoord(position.coords.latitude, position.coords.longitude);
@@ -49,7 +48,9 @@ const SearchMenu = ({setGeolocation}) => {
 
   return (
     <SearchMenuStyled>
-      <button className="search search-place">Seach for places</button>
+      <button className="search search-place" onClick={openMenu} v>
+        Seach for places
+      </button>
       <button className="search search-gps" onClick={handleGPS}>
         <span className="material-icons">gps_fixed</span>
       </button>

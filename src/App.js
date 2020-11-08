@@ -44,6 +44,10 @@ function App() {
     setWeatherWeek(data?.consolidated_weather.filter((_, ind) => ind !== 0));
   };
 
+  const handleSearch = (city) => {
+    if (city) setCity(city);
+  };
+
   //search by city
   useEffect(() => {
     if (city) {
@@ -79,7 +83,7 @@ function App() {
         getCoord(position.coords.latitude, position.coords.longitude);
       });
     } else {
-      const data= localSt.getLocalStore('weather')
+      const data = localSt.getLocalStore('weather');
       initApp(data);
     }
   }, []);
@@ -90,6 +94,7 @@ function App() {
       <Wrapper>
         {weatherToday && (
           <WeatherToday
+            handleSearch={handleSearch}
             weatherToday={weatherToday}
             city={city}
             setGeolocation={setGeolocation}

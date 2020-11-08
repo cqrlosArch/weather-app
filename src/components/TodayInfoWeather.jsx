@@ -10,7 +10,7 @@ const TodayInfoWeatherStyled = styled.div`
   margin-top: -2rem;
   @media screen and (max-width: 550px) {
     margin-top: 1rem;
-    }
+  }
 
   .temperature {
     font-weight: 500;
@@ -57,14 +57,12 @@ const TodayInfoWeatherStyled = styled.div`
 
   .city {
     text-transform: capitalize;
-    
   }
   .author {
     font-weight: 600;
     font-size: 12px;
     line-height: 17px;
     color: #616475;
-    
   }
 `;
 

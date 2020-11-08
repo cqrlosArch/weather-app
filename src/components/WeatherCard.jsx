@@ -10,7 +10,7 @@ const WeatherCardStyled = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  
+
   .date {
     font-weight: 500;
     font-size: 16px;
@@ -24,12 +24,9 @@ const WeatherCardStyled = styled.div`
     justify-content: space-evenly;
     align-items: center;
   }
-
-
 `;
 
 const WeatherCard = ({ weather }) => {
-
   const formatDate = (date) => {
     const d = new Date(date);
     const today = new Date();
@@ -50,7 +47,7 @@ const WeatherCard = ({ weather }) => {
   return (
     <WeatherCardStyled>
       <h2 className="date">{formatDate(weather?.applicable_date)}</h2>
-      <StateImg state={weather?.weather_state_name} className="state"/>
+      <StateImg state={weather?.weather_state_name} className="state" />
       <div className="temperature">
         <p className="max_temp">{Math.round(weather?.max_temp)}ºC</p>
         <p className="min_temp">{Math.round(weather?.min_temp)}ºC</p>

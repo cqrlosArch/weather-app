@@ -28,8 +28,8 @@ const WeatherInfoStyled = styled.div`
     margin: 0.2rem auto;
     @media screen and (max-width: 550px) {
       padding: 2rem;
-      margin-left:0;
-      margin-right:0;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 `;
