@@ -28,9 +28,14 @@ const WeatherInfoStyled = styled.div`
     color: #e7e7eb;
     margin: 0.2rem auto;
     @media screen and (max-width: 550px) {
+      margin-top:1rem;
       padding: 2rem;
       margin-left: 0;
       margin-right: 0;
+    }
+    @media screen and (max-width: 900px) {
+      margin-top:2rem;
+    
     }
   }
 `;
