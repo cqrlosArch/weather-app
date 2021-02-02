@@ -7,13 +7,10 @@ const ListCardStyled = styled.div`
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   grid-gap: 1rem 4rem;
   grid-auto-flow: dense;
-  @media screen and (max-width: 550px) {
-    margin: 0;
-    grid-gap: auto;
-  }
+ 
 `;
 
 const ListCard = ({ weatherWeek }) => {
